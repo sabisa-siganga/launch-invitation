@@ -1,0 +1,41 @@
+.select-page-cont {
+  p {
+    color: #fb0000;
+    margin-bottom: 3px;
+  }
+
+  .select-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    select {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      width: 100%;
+      appearance: none; /* Removing default arrow in most browsers */
+      -webkit-appearance: none; /* Removing default arrow in Safari */
+      -moz-appearance: none; /* Removing default arrow in Firefox */
+      padding: 10px;
+      padding-right: 40px; /* Adding space for the arrow */
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+
+    .down-arrow {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #000;
+      transform: translateY(-50%);
+      pointer-events: none;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-top: -9px;
+    }
+  }
+}

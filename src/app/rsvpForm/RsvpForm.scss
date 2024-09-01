@@ -1,0 +1,114 @@
+.form-image-cont {
+  position: relative;
+  height: 100%;
+
+  .background-container {
+    position: absolute;
+    height: 100vh;
+    z-index: -1;
+    width: 100%;
+    color: #fff;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.7098039216);
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  form {
+    max-width: 646px;
+    margin: 0 auto;
+    padding: 50px 0;
+    color: #fff;
+    height: 100%;
+
+    .form-title {
+      font-size: 30px;
+      font-weight: 300;
+      margin-bottom: 25px;
+    }
+
+    .fields-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      margin-bottom: 25px;
+
+      span {
+        color: #fb0000;
+        margin-bottom: -17px;
+      }
+
+      input,
+      select {
+        font-size: 18px;
+        outline: none;
+        max-width: 646px;
+        height: 50px;
+        margin-bottom: 20px;
+        width: 100%;
+        border-radius: 5px;
+        padding-left: 10px;
+        color: #000;
+        background: #d9d9d9;
+      }
+    }
+
+    .rsvp-btns {
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      column-gap: 60px;
+      justify-content: center;
+
+      button,
+      a {
+        max-width: 170px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #bd2a2a;
+        color: #fff;
+        font-size: 15px;
+        font-family: 500;
+        width: 100%;
+        height: 38px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      padding: 40px;
+
+      .rsvp-btns {
+        flex-direction: column;
+        row-gap: 30px;
+        justify-content: center;
+        align-items: center;
+
+        a,
+        button {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+
+  @media (max-height: 562px) {
+    height: auto;
+  }
+}
